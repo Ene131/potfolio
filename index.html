@@ -1,12 +1,174 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ene's Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ene — Portfolio</title>
+  <meta name="description" content="Ene — cross‑functional UX/UI designer. Product, systems, AI tools." />
+
+  <!-- Inter + JetBrains Mono for that tasteful dev‑designer energy -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind (CDN) -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <style>
+    :root { color-scheme: dark; }
+    html,body{background:#0a0c0f}
+    .card:hover { transform: translateY(-3px); }
+    .fade-border { box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08); }
+  </style>
 </head>
-<body class="bg-gray-900 text-white min-h-screen flex items-center justify-center">
-  <h1 class="text-5xl font-bold">Hello, I’m Ene 🎨</h1>
+
+<body class="text-gray-200 antialiased" style="font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji','Segoe UI Emoji';">
+  <!-- Shell -->
+  <div class="min-h-screen lg:grid lg:grid-cols-12 lg:gap-10 max-w-7xl mx-auto px-6 py-10">
+
+    <!-- Left rail / “bio panel” -->
+    <aside class="lg:col-span-4 space-y-8">
+      <header class="space-y-4">
+        <div class="flex items-center gap-3">
+          <div class="h-12 w-12 rounded-lg bg-gradient-to-br from-emerald-400/20 to-cyan-400/20 fade-border"></div>
+          <div>
+            <h1 class="text-xl font-semibold">Ene (Elene Chekurishvili)</h1>
+            <p class="text-sm text-gray-400">UX/UI · Systems · AI tooling</p>
+          </div>
+        </div>
+
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Cross‑functional designer with CS roots. I build useful interfaces, prompt systems, and neat constraints. Currently making
+          <span class="text-gray-100 font-medium">cinematic prompt tools</span> and fast design systems.
+        </p>
+
+        <ul class="text-sm text-gray-300 space-y-1">
+          <li><span class="text-gray-500">Base:</span> Tbilisi</li>
+          <li><span class="text-gray-500">Stack:</span> Figma, React, Tailwind, Vite, OpenAI</li>
+          <li><span class="text-gray-500">Now:</span> PromptCraft · Visual vocabulary for AI prompts</li>
+        </ul>
+
+        <div class="flex flex-wrap gap-2">
+          <a class="px-3 py-1 rounded-md bg-white/5 fade-border hover:bg-white/10 text-sm" href="#" target="_blank" rel="noreferrer">Email</a>
+          <a class="px-3 py-1 rounded-md bg-white/5 fade-border hover:bg-white/10 text-sm" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="px-3 py-1 rounded-md bg-white/5 fade-border hover:bg-white/10 text-sm" href="#" target="_blank" rel="noreferrer">Medium</a>
+          <a class="px-3 py-1 rounded-md bg-white/5 fade-border hover:bg-white/10 text-sm" href="https://ene131.github.io/promptcraft/" target="_blank" rel="noreferrer">PromptCraft ↗</a>
+        </div>
+      </header>
+
+      <!-- “Capabilities” / tags -->
+      <section class="space-y-3">
+        <h2 class="text-xs uppercase tracking-wider text-gray-500">Capabilities</h2>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-2.5 py-1 text-xs rounded-md bg-emerald-400/10 text-emerald-300 fade-border">Product discovery</span>
+          <span class="px-2.5 py-1 text-xs rounded-md bg-cyan-400/10 text-cyan-300 fade-border">Design systems</span>
+          <span class="px-2.5 py-1 text-xs rounded-md bg-fuchsia-400/10 text-fuchsia-300 fade-border">Prompt UX</span>
+          <span class="px-2.5 py-1 text-xs rounded-md bg-amber-400/10 text-amber-300 fade-border">Prototyping</span>
+          <span class="px-2.5 py-1 text-xs rounded-md bg-sky-400/10 text-sky-300 fade-border">Research ops</span>
+        </div>
+      </section>
+    </aside>
+
+    <!-- Right column / Projects -->
+    <main class="lg:col-span-8 mt-10 lg:mt-0 space-y-10">
+
+      <!-- Section header -->
+      <div class="flex items-end justify-between">
+        <h2 class="text-sm uppercase tracking-wider text-gray-500">Selected work</h2>
+        <a class="text-xs text-gray-400 hover:text-gray-200" href="#all">All projects</a>
+      </div>
+
+      <!-- Project grid -->
+      <div class="grid md:grid-cols-2 gap-6" id="work">
+
+        <!-- Card 1 -->
+        <article class="card transition-all fade-border rounded-xl overflow-hidden bg-white/5">
+          <a href="#" class="block">
+            <div class="aspect-video bg-gradient-to-br from-emerald-500/10 via-cyan-500/10 to-sky-500/10"></div>
+          </a>
+          <div class="p-4 space-y-3">
+            <div class="flex items-center gap-2 text-xs text-gray-400">
+              <span class="px-2 py-0.5 rounded bg-white/5 fade-border">AI tooling</span>
+              <span class="px-2 py-0.5 rounded bg-white/5 fade-border">Systems</span>
+            </div>
+            <h3 class="text-lg font-semibold">PromptCraft — cinematic prompt generator</h3>
+            <p class="text-sm text-gray-300">
+              A vocabulary‑driven builder that maps <em>what you see</em> to camera, light and texture language. Faster briefs, better outputs.
+            </p>
+            <div class="flex items-center gap-3 pt-1">
+              <a href="https://ene131.github.io/promptcraft/" target="_blank" rel="noreferrer" class="text-sm text-cyan-300 hover:underline">Live ↗</a>
+              <a href="#" class="text-sm text-gray-400 hover:text-gray-200">Case study</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card transition-all fade-border rounded-xl overflow-hidden bg-white/5">
+          <a href="#" class="block">
+            <div class="aspect-video bg-gradient-to-br from-fuchsia-500/10 via-purple-500/10 to-indigo-500/10"></div>
+          </a>
+          <div class="p-4 space-y-3">
+            <div class="flex items-center gap-2 text-xs text-gray-400">
+              <span class="px-2 py-0.5 rounded bg-white/5 fade-border">Design system</span>
+              <span class="px-2 py-0.5 rounded bg-white/5 fade-border">Accessibility</span>
+            </div>
+            <h3 class="text-lg font-semibold">Atlas UI — pragmatic tokens + components</h3>
+            <p class="text-sm text-gray-300">
+              Tokenized system for product surfaces across web/app. Build‑once patterns, fewer bespoke nightmares, happier devs.
+            </p>
+            <div class="flex items-center gap-3 pt-1">
+              <a href="#" class="text-sm text-gray-400 hover:text-gray-200">Docs</a>
+              <a href="#" class="text-sm text-gray-400 hover:text-gray-200">Figma</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card transition-all fade-border rounded-xl overflow-hidden bg-white/5">
+          <a href="#" class="block">
+            <div class="aspect-video bg-gradient-to-br from-amber-500/10 via-rose-500/10 to-red-500/10"></div>
+          </a>
+          <div class="p-4 space-y-3">
+            <div class="flex items-center gap-2 text-xs text-gray-400">
+              <span class="px-2 py-0.5 rounded bg-white/5 fade-border">Research</span>
+              <span class="px-2 py-0.5 rounded bg-white/5 fade-border">Prototyping</span>
+            </div>
+            <h3 class="text-lg font-semibold">Search as conversation — intent modeling</h3>
+            <p class="text-sm text-gray-300">
+              Turn search into a guided flow using intent chips + quick answers. Higher task completion, fewer dead ends.
+            </p>
+            <div class="flex items-center gap-3 pt-1">
+              <a href="#" class="text-sm text-gray-400 hover:text-gray-200">Notes</a>
+              <a href="#" class="text-sm text-gray-400 hover:text-gray-200">Prototype</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="card transition-all fade-border rounded-xl overflow-hidden bg-white/5">
+          <a href="#" class="block">
+            <div class="aspect-video bg-gradient-to-br from-lime-500/10 via-emerald-500/10 to-teal-500/10"></div>
+          </a>
+          <div class="p-4 space-y-3">
+            <div class="flex items-center gap-2 text-xs text-gray-400">
+              <span class="px-2 py-0.5 rounded bg-white/5 fade-border">Brand</span>
+              <span class="px-2 py-0.5 rounded bg-white/5 fade-border">Web</span>
+            </div>
+            <h3 class="text-lg font-semibold">Tattoo studio site — booking flow that doesn’t suck</h3>
+            <p class="text-sm text-gray-300">
+              Narrowed options, clearer pricing, “pick artist by style.” Bookings up, DMs down.
+            </p>
+            <div class="flex items-center gap-3 pt-1">
+              <a href="#" class="text-sm text-gray-400 hover:text-gray-200">Live</a>
+              <a href="#" class="text-sm text-gray-400 hover:text-gray-200">Before/After</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Footer / contact -->
+      <footer class="pt-6 mt-2 border-t border-white/10 text-sm text-gray-400">
+        Available for senior product/UX work and system audits. <a href="#" class="text-cyan-300 hover:underline">Say hi →</a>
+      </footer>
+    </main>
+  </div>
 </body>
 </html>
