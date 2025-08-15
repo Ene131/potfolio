@@ -1,174 +1,225 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ene — Portfolio</title>
-  <meta name="description" content="Ene — cross‑functional UX/UI designer. Product, systems, AI tools." />
-
-  <!-- Inter + JetBrains Mono for that tasteful dev‑designer energy -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- Tailwind (CDN) -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
-  <style>
-    :root { color-scheme: dark; }
-    html,body{background:#0a0c0f}
-    .card:hover { transform: translateY(-3px); }
-    .fade-border { box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08); }
-  </style>
-</head>
-
-<body class="text-gray-200 antialiased" style="font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji','Segoe UI Emoji';">
-  <!-- Shell -->
-  <div class="min-h-screen lg:grid lg:grid-cols-12 lg:gap-10 max-w-7xl mx-auto px-6 py-10">
-
-    <!-- Left rail / “bio panel” -->
-    <aside class="lg:col-span-4 space-y-8">
-      <header class="space-y-4">
-        <div class="flex items-center gap-3">
-          <div class="h-12 w-12 rounded-lg bg-gradient-to-br from-emerald-400/20 to-cyan-400/20 fade-border"></div>
-          <div>
-            <h1 class="text-xl font-semibold">Ene (Elene Chekurishvili)</h1>
-            <p class="text-sm text-gray-400">UX/UI · Systems · AI tooling</p>
-          </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Ene — Portfolio</title>
+    <meta name="color-scheme" content="light">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+      :root { --accent: #3B82F6; }
+      html { font-feature-settings: "cv02","cv03","ss01","ss02","liga","kern"; }
+      /* kons vibes: roomy, quiet */
+      .kons-grid { grid-template-columns: 1fr; }
+      @media (min-width:1024px){ .kons-grid { grid-template-columns: 260px 1fr; gap: 4rem; } }
+    </style>
+  </head>
+  <body class="bg-white text-neutral-900 antialiased">
+    <div class="max-w-6xl mx-auto px-6 lg:px-10 py-14 lg:py-16">
+      <!-- Top bar -->
+      <header class="flex items-start justify-between mb-10">
+        <div>
+          <h1 class="text-3xl lg:text-[40px] leading-tight font-medium">Elene “Ene” Chekurishvili</h1>
+          <p class="text-neutral-500 mt-1 text-sm">
+            Cross‑functional UX/UI · systems thinker · AI tooling
+          </p>
         </div>
-
-        <p class="text-sm text-gray-300 leading-relaxed">
-          Cross‑functional designer with CS roots. I build useful interfaces, prompt systems, and neat constraints. Currently making
-          <span class="text-gray-100 font-medium">cinematic prompt tools</span> and fast design systems.
-        </p>
-
-        <ul class="text-sm text-gray-300 space-y-1">
-          <li><span class="text-gray-500">Base:</span> Tbilisi</li>
-          <li><span class="text-gray-500">Stack:</span> Figma, React, Tailwind, Vite, OpenAI</li>
-          <li><span class="text-gray-500">Now:</span> PromptCraft · Visual vocabulary for AI prompts</li>
-        </ul>
-
-        <div class="flex flex-wrap gap-2">
-          <a class="px-3 py-1 rounded-md bg-white/5 fade-border hover:bg-white/10 text-sm" href="#" target="_blank" rel="noreferrer">Email</a>
-          <a class="px-3 py-1 rounded-md bg-white/5 fade-border hover:bg-white/10 text-sm" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a class="px-3 py-1 rounded-md bg-white/5 fade-border hover:bg-white/10 text-sm" href="#" target="_blank" rel="noreferrer">Medium</a>
-          <a class="px-3 py-1 rounded-md bg-white/5 fade-border hover:bg-white/10 text-sm" href="https://ene131.github.io/promptcraft/" target="_blank" rel="noreferrer">PromptCraft ↗</a>
-        </div>
+        <nav class="hidden lg:flex gap-6 text-sm text-neutral-600">
+          <a class="hover:text-neutral-900" href="#featured">Featured</a>
+          <a class="hover:text-neutral-900" href="#work">Work</a>
+          <a class="hover:text-neutral-900" href="#writing">Writing</a>
+          <a class="hover:text-neutral-900" href="#contact">Contact</a>
+        </nav>
       </header>
 
-      <!-- “Capabilities” / tags -->
-      <section class="space-y-3">
-        <h2 class="text-xs uppercase tracking-wider text-gray-500">Capabilities</h2>
-        <div class="flex flex-wrap gap-2">
-          <span class="px-2.5 py-1 text-xs rounded-md bg-emerald-400/10 text-emerald-300 fade-border">Product discovery</span>
-          <span class="px-2.5 py-1 text-xs rounded-md bg-cyan-400/10 text-cyan-300 fade-border">Design systems</span>
-          <span class="px-2.5 py-1 text-xs rounded-md bg-fuchsia-400/10 text-fuchsia-300 fade-border">Prompt UX</span>
-          <span class="px-2.5 py-1 text-xs rounded-md bg-amber-400/10 text-amber-300 fade-border">Prototyping</span>
-          <span class="px-2.5 py-1 text-xs rounded-md bg-sky-400/10 text-sky-300 fade-border">Research ops</span>
-        </div>
-      </section>
-    </aside>
+      <!-- Split grid -->
+      <main class="grid kons-grid">
+        <!-- Left column -->
+        <aside class="mb-10 lg:mb-0">
+          <ul class="space-y-4 text-sm">
+            <li class="text-neutral-600">
+              Designing clear systems, prompts and interfaces for messy problems.
+            </li>
+            <li>
+              <a class="underline decoration-neutral-300 hover:decoration-neutral-600"
+                 href="https://ene131.github.io/promptcraft/" target="_blank" rel="noreferrer">
+                PromptCraft — cinematic prompt builder
+              </a>
+            </li>
+            <li>
+              <a class="underline decoration-neutral-300 hover:decoration-neutral-600"
+                 href="mailto:el.chekurishvili@gmail.com">el.chekurishvili@gmail.com</a>
+            </li>
+          </ul>
 
-    <!-- Right column / Projects -->
-    <main class="lg:col-span-8 mt-10 lg:mt-0 space-y-10">
+          <div class="mt-8 text-xs text-neutral-500">
+            Currently: prototyping AI‑assisted creative tools.
+          </div>
+        </aside>
 
-      <!-- Section header -->
-      <div class="flex items-end justify-between">
-        <h2 class="text-sm uppercase tracking-wider text-gray-500">Selected work</h2>
-        <a class="text-xs text-gray-400 hover:text-gray-200" href="#all">All projects</a>
-      </div>
-
-      <!-- Project grid -->
-      <div class="grid md:grid-cols-2 gap-6" id="work">
-
-        <!-- Card 1 -->
-        <article class="card transition-all fade-border rounded-xl overflow-hidden bg-white/5">
-          <a href="#" class="block">
-            <div class="aspect-video bg-gradient-to-br from-emerald-500/10 via-cyan-500/10 to-sky-500/10"></div>
-          </a>
-          <div class="p-4 space-y-3">
-            <div class="flex items-center gap-2 text-xs text-gray-400">
-              <span class="px-2 py-0.5 rounded bg-white/5 fade-border">AI tooling</span>
-              <span class="px-2 py-0.5 rounded bg-white/5 fade-border">Systems</span>
+        <!-- Right column -->
+        <section class="space-y-10">
+          <!-- Featured card -->
+          <section id="featured" class="border border-neutral-200 rounded-2xl p-6 lg:p-8">
+            <div class="flex items-baseline justify-between mb-4">
+              <h2 class="uppercase tracking-wide text-[11px] text-neutral-500">Featured</h2>
+              <div class="text-[11px] text-neutral-400">Live demo</div>
             </div>
-            <h3 class="text-lg font-semibold">PromptCraft — cinematic prompt generator</h3>
-            <p class="text-sm text-gray-300">
-              A vocabulary‑driven builder that maps <em>what you see</em> to camera, light and texture language. Faster briefs, better outputs.
-            </p>
-            <div class="flex items-center gap-3 pt-1">
-              <a href="https://ene131.github.io/promptcraft/" target="_blank" rel="noreferrer" class="text-sm text-cyan-300 hover:underline">Live ↗</a>
-              <a href="#" class="text-sm text-gray-400 hover:text-gray-200">Case study</a>
+
+            <!-- Folder mount -->
+            <div id="folder-root" class="relative" style="height: 360px;"></div>
+
+            <div class="mt-4 flex items-center justify-between">
+              <div class="text-sm">
+                <span class="font-medium">Folder component</span>
+                <span class="text-neutral-500"> — minimal, tactile file UI</span>
+              </div>
+              <a class="text-sm underline decoration-neutral-300 hover:decoration-neutral-700"
+                 href="#work">See more</a>
+            </div>
+          </section>
+
+          <!-- Work list placeholder -->
+          <section id="work" class="space-y-4">
+            <h2 class="uppercase tracking-wide text-[11px] text-neutral-500">Selected work</h2>
+            <div class="grid md:grid-cols-2 gap-4">
+              <a class="block border border-neutral-200 rounded-xl p-4 hover:border-neutral-300 transition"
+                 href="https://ene131.github.io/promptcraft/" target="_blank" rel="noreferrer">
+                <div class="text-sm font-medium">PromptCraft</div>
+                <div class="text-xs text-neutral-500">Universal prompt anatomy tool</div>
+              </a>
+              <div class="border border-neutral-200 rounded-xl p-4">
+                <div class="text-sm font-medium">AI UI Patterns</div>
+                <div class="text-xs text-neutral-500">Micro‑interactions for LLM tools</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Writing placeholder -->
+          <section id="writing" class="space-y-2">
+            <h2 class="uppercase tracking-wide text-[11px] text-neutral-500">Writing</h2>
+            <ul class="text-sm list-disc pl-5 text-neutral-700">
+              <li>Prompt anatomy for non‑photographers</li>
+              <li>Designing guardrails without killing creativity</li>
+            </ul>
+          </section>
+
+          <!-- Contact -->
+          <section id="contact" class="pt-2">
+            <h2 class="uppercase tracking-wide text-[11px] text-neutral-500 mb-1">Contact</h2>
+            <a class="text-sm underline decoration-neutral-300 hover:decoration-neutral-700"
+               href="mailto:el.chekurishvili@gmail.com">el.chekurishvili@gmail.com</a>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <!-- React + Babel -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Light “Folder” component (browser JSX, no build) -->
+    <script type="text/babel">
+      const { useMemo, useEffect, useState } = React;
+      const clamp = (n, a, b) => Math.max(a, Math.min(b, n));
+      const darken = (hex, pct=12)=>{
+        const h = hex.replace('#','');
+        const rgb = (h.length===3
+          ? h.split('').map(x=>parseInt(x+x,16))
+          : [h.slice(0,2),h.slice(2,4),h.slice(4,6)].map(x=>parseInt(x,16)));
+        const adj = v => clamp(Math.round(v*(1-pct/100)),0,255);
+        return `rgb(${adj(rgb[0])}, ${adj(rgb[1])}, ${adj(rgb[2])})`;
+      };
+
+      function Folder({ size=360, color="#3B82F6", className="" }) {
+        const accent = useMemo(()=>color,[color]);
+        const shade  = useMemo(()=>darken(color, 14),[color]);
+        const shade2 = useMemo(()=>darken(color, 26),[color]);
+
+        const [w,setW] = useState(size);
+        useEffect(()=>{
+          const fit=()=>{
+            const el=document.getElementById('folder-root');
+            if(!el) return;
+            setW(Math.min(size, el.clientWidth - 24));
+          };
+          fit(); window.addEventListener('resize',fit);
+          return ()=>window.removeEventListener('resize',fit);
+        },[size]);
+
+        const h = Math.round(w*0.62);
+        const tabH = Math.round(h*0.22);
+
+        return (
+          <div className={className} style={{width:w, height:h}}>
+            <div className="relative mx-auto" style={{width:w, height:h}}>
+              {/* Back panel (very light) */}
+              <div
+                className="absolute inset-0 rounded-2xl"
+                style={{
+                  background: `linear-gradient(145deg,#ffffff, #f6f7f9)`,
+                  boxShadow: "0 10px 25px rgba(16,24,40,.06)",
+                }}
+              ></div>
+
+              {/* Body */}
+              <div
+                className="absolute inset-0 rounded-2xl border border-neutral-200"
+                style={{
+                  background: `linear-gradient(160deg, ${accent}10 0%, ${shade}10 100%)`,
+                }}
+              ></div>
+
+              {/* Tab */}
+              <div
+                className="absolute rounded-t-xl border border-neutral-200"
+                style={{
+                  left: Math.round(w*0.08),
+                  top: -Math.round(tabH*0.28),
+                  width: Math.round(w*0.46),
+                  height: tabH,
+                  background: `linear-gradient(160deg, ${accent}12 0%, ${shade2}12 100%)`,
+                  boxShadow: "0 6px 16px rgba(16,24,40,.06)",
+                }}
+              ></div>
+
+              {/* Gentle shine */}
+              <div
+                className="absolute inset-0 rounded-2xl pointer-events-none"
+                style={{
+                  background:
+                    "radial-gradient(120% 80% at 10% 10%, rgba(255,255,255,.6) 0%, rgba(255,255,255,0) 60%)"
+                }}
+              ></div>
+
+              {/* Grid hairline */}
+              <div className="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none">
+                <svg width="100%" height="100%" viewBox={`0 0 ${w} ${h}`}>
+                  <defs>
+                    <pattern id="p" width="26" height="26" patternUnits="userSpaceOnUse">
+                      <path d="M 26 0 L 0 0 0 26" fill="none" stroke="rgba(17,24,39,.05)"></path>
+                    </pattern>
+                  </defs>
+                  <rect width={w} height={h} fill="url(#p)"></rect>
+                </svg>
+              </div>
+
+              {/* Label */}
+              <div className="absolute bottom-4 left-4 bg-white/70 px-3 py-1.5 rounded-md text-xs text-neutral-700 border border-neutral-200"
+                   style={{backdropFilter:"blur(4px)", WebkitBackdropFilter:"blur(4px)"}}>
+                ~/work/promptcraft
+              </div>
             </div>
           </div>
-        </article>
+        );
+      }
 
-        <!-- Card 2 -->
-        <article class="card transition-all fade-border rounded-xl overflow-hidden bg-white/5">
-          <a href="#" class="block">
-            <div class="aspect-video bg-gradient-to-br from-fuchsia-500/10 via-purple-500/10 to-indigo-500/10"></div>
-          </a>
-          <div class="p-4 space-y-3">
-            <div class="flex items-center gap-2 text-xs text-gray-400">
-              <span class="px-2 py-0.5 rounded bg-white/5 fade-border">Design system</span>
-              <span class="px-2 py-0.5 rounded bg-white/5 fade-border">Accessibility</span>
-            </div>
-            <h3 class="text-lg font-semibold">Atlas UI — pragmatic tokens + components</h3>
-            <p class="text-sm text-gray-300">
-              Tokenized system for product surfaces across web/app. Build‑once patterns, fewer bespoke nightmares, happier devs.
-            </p>
-            <div class="flex items-center gap-3 pt-1">
-              <a href="#" class="text-sm text-gray-400 hover:text-gray-200">Docs</a>
-              <a href="#" class="text-sm text-gray-400 hover:text-gray-200">Figma</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 3 -->
-        <article class="card transition-all fade-border rounded-xl overflow-hidden bg-white/5">
-          <a href="#" class="block">
-            <div class="aspect-video bg-gradient-to-br from-amber-500/10 via-rose-500/10 to-red-500/10"></div>
-          </a>
-          <div class="p-4 space-y-3">
-            <div class="flex items-center gap-2 text-xs text-gray-400">
-              <span class="px-2 py-0.5 rounded bg-white/5 fade-border">Research</span>
-              <span class="px-2 py-0.5 rounded bg-white/5 fade-border">Prototyping</span>
-            </div>
-            <h3 class="text-lg font-semibold">Search as conversation — intent modeling</h3>
-            <p class="text-sm text-gray-300">
-              Turn search into a guided flow using intent chips + quick answers. Higher task completion, fewer dead ends.
-            </p>
-            <div class="flex items-center gap-3 pt-1">
-              <a href="#" class="text-sm text-gray-400 hover:text-gray-200">Notes</a>
-              <a href="#" class="text-sm text-gray-400 hover:text-gray-200">Prototype</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 4 -->
-        <article class="card transition-all fade-border rounded-xl overflow-hidden bg-white/5">
-          <a href="#" class="block">
-            <div class="aspect-video bg-gradient-to-br from-lime-500/10 via-emerald-500/10 to-teal-500/10"></div>
-          </a>
-          <div class="p-4 space-y-3">
-            <div class="flex items-center gap-2 text-xs text-gray-400">
-              <span class="px-2 py-0.5 rounded bg-white/5 fade-border">Brand</span>
-              <span class="px-2 py-0.5 rounded bg-white/5 fade-border">Web</span>
-            </div>
-            <h3 class="text-lg font-semibold">Tattoo studio site — booking flow that doesn’t suck</h3>
-            <p class="text-sm text-gray-300">
-              Narrowed options, clearer pricing, “pick artist by style.” Bookings up, DMs down.
-            </p>
-            <div class="flex items-center gap-3 pt-1">
-              <a href="#" class="text-sm text-gray-400 hover:text-gray-200">Live</a>
-              <a href="#" class="text-sm text-gray-400 hover:text-gray-200">Before/After</a>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <!-- Footer / contact -->
-      <footer class="pt-6 mt-2 border-t border-white/10 text-sm text-gray-400">
-        Available for senior product/UX work and system audits. <a href="#" class="text-cyan-300 hover:underline">Say hi →</a>
-      </footer>
-    </main>
-  </div>
-</body>
+      ReactDOM.createRoot(document.getElementById('folder-root'))
+        .render(<Folder size={360} color={getComputedStyle(document.documentElement).getPropertyValue('--accent') || '#3B82F6'} />);
+    </script>
+  </body>
 </html>
